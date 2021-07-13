@@ -1,9 +1,9 @@
 terraform {
   required_version = "~> 0.15.1"
   backend "s3" {
-    bucket = "..."                # 4. Put your bucket name here
+    bucket = "tfstate-lambda-challenge"  # 4. Put your bucket here
     key = "test"
-    region = "..."                # 5. Put your region name here    
+    region = "us-west-2"                 # 5. Put your region here
   }
   required_providers {
     aws = {
