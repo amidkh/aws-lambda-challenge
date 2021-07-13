@@ -5,9 +5,9 @@ locals {
       source_file = "src/get.py",
       function_name = "lambda-get",
       handler = "get.lambda_handler"
-      url = "..."                       # 6. Put your url (domain name) here
-      port = "..."                      # 6. Put your port number here
-      api = "api"
+      url = "w0w6pf6wy3.execute-api.us-west-2.amazonaws.com"   # 6. Put your URL here
+      port = "443"                                             # 6. Put your PORT here
+      api = "demo/creds"                                       # 6. You can change api
 
     }
     "post_lambda" = {
@@ -15,9 +15,9 @@ locals {
       source_file = "src/post.py",
       function_name = "lambda-post",
       handler = "post.lambda_handler"
-      url = "..."                       # 6. Put your url (domain name) here  
-      port = "..."                      # 6. Put your port number here
-      api = "api"
+      url = "w0w6pf6wy3.execute-api.us-west-2.amazonaws.com"   # 6. Put your URL here
+      port = "443"                                             # 6. Put your PORT here  
+      api = "demo/creds"                                       # 6. You can change api
    
     }
   }
@@ -41,7 +41,7 @@ resource "aws_lambda_function" "get_lambda" {
 
   source_code_hash = filebase64sha256(each.value.filename)
 
-  runtime = "python3.7"
+  runtime = var.runtime[var.env]
   
   environment {
     variables = {

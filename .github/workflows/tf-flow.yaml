@@ -39,7 +39,7 @@ jobs:
       run: terraform validate
       
     - name: Terraform plan
-      run: terraform plan -out tfplan -no-color
+      run: terraform plan -var="env=test" -out tfplan -no-color
       
     - name: Terraform build
       run: terraform apply tfplan
@@ -51,4 +51,4 @@ jobs:
       run: python ./test/test_post.py
         
     - name: Terraform clean
-      run: terraform destroy -auto-approve
+      run: terraform destroy -var="env=test" -auto-approve
