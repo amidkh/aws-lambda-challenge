@@ -14,3 +14,5 @@
 5. Define region in files: *aws.tf* and *variables.tf*.
 6. Point out some variables as *url* and *port* in lambda.tf file.
 7. If you want to look into our CI/CD workflow you can find it in *.github/workflows/tf-flow.yaml*
+8. When you make the changes in the previous items and apply them with *git push* command you will get the following output:
+![image](https://drive.google.com/uc?export=view&id=1DqXjnK7tDzqkdD6ysR9cvwA1V1xxfTF0)
