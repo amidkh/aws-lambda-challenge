@@ -5,9 +5,9 @@ locals {
       source_file = "src/get.py",
       function_name = "lambda-get",
       handler = "get.lambda_handler"
-      url = "w0w6pf6wy3.execute-api.us-west-2.amazonaws.com"   # 6. Put your URL here
-      port = "443"                                             # 6. Put your PORT here
-      api = "demo/creds"
+      url = "..."                                              # 6. Put your URL here
+      port = "..."                                             # 6. Put your PORT here
+      api = "api"                                              # 6. Put your api here
 
     }
     "post_lambda" = {
@@ -15,9 +15,9 @@ locals {
       source_file = "src/post.py",
       function_name = "lambda-post",
       handler = "post.lambda_handler"
-      url = "w0w6pf6wy3.execute-api.us-west-2.amazonaws.com"   # 6. Put your URL here
-      port = "443"                                             # 6. Put your PORT here  
-      api = "demo/creds" 
+      url = "..."                                              # 6. Put your URL here
+      port = "..."                                             # 6. Put your PORT here  
+      api = "api"                                              # 6. Put your api here
    
     }
   }
