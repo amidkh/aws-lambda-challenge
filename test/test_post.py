@@ -10,6 +10,13 @@ invoke_response = lambda_client.invoke(FunctionName='lambda-post',
 
 data = json.loads(invoke_response['Payload'].read())
 
-print ("Response: ", end='\n')
+print (end='\n')
+print ("**Response**: ", end='\n')
 print ("Welcome to our demo API, here are the details of your request: ", end='\n' )
-print (f'Headers: Post Body:  {data}')
+print (end='\n')
+print ("*Headers*: ", end='\n')
+print ("Content-Type: application/json ", end='\n' )
+print (end='\n')
+print ("*Method*: ", end='\n')
+print ("POST")
+print (f'Body:  {data}')
