@@ -10,6 +10,7 @@ invoke_response = lambda_client.invoke(FunctionName='lambda-get',
 
 data = json.loads(invoke_response['Payload'].read())
 
+
 print (end='\n')
 print ("**Response**: ", end='\n')
 print ("Welcome to our demo API, here are the details of your request: ", end='\n' )

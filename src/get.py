@@ -10,7 +10,7 @@ PORT = os.environ['PORT']
 API = os.environ['API']
 
 
-host = f"https://{URL}:{PORT}/{API}"           
+host = f"https://{URL}:{PORT}/{API}"
 
 
 headers = { "Content-Type": "application/json" }
